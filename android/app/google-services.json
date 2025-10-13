@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "186434895461",
+    "project_id": "apcob-d865f",
+    "storage_bucket": "apcob-d865f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186434895461:android:6795b3a815eda2c78d508c",
+        "android_client_info": {
+          "package_name": "com.apcob"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7a7LVH0Xw0e6Vsj3lq03BVpv4_yDlEL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
