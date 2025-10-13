@@ -16,7 +16,7 @@ type BeneItem = {
     ifscCode: string;
     statusDesc: string
 };
-const BeneficiaryList = () => {
+const Receipt = () => {
     const [number, setNumber] = useState('');
     const [name, setName] = useState('');
     const [searchText, setSearchText] = useState('');
@@ -79,9 +79,9 @@ const BeneficiaryList = () => {
     const UserCard = ({ item }: { item: (typeof beneList)[0] }) => (
         <TouchableOpacity
             style={styles.card}
-            onPress={() =>
-                navigation.navigate("BeneficiaryDetails" as never, { items: item })
-            }
+            // onPress={() =>
+            //     navigation.navigate("BeneficiaryDetails" as never, { items: item })
+            // }
         >
             <TouchableOpacity>
                 <Text style={[styles.actionText, { color: '#0E8345', alignSelf: "flex-end" }]}>Verified</Text>
@@ -173,7 +173,7 @@ const BeneficiaryList = () => {
                 contentContainerStyle={{ paddingVertical: 0, marginVertical: 0 }}
                 showsVerticalScrollIndicator={false}
             >
-                <CarouselComponent />
+                {/* <CarouselComponent /> */}
                 <View style={{ marginTop: "6%" }}>
                     <Text style={{ color: "#8C8C8C" }}>Fill All The Details * </Text>
                     <TextInput
@@ -433,10 +433,7 @@ const BeneficiaryList = () => {
                         alignSelf: 'flex-end',
                     }}
                     // disabled={!isChecked && !selectedDevice}
-                    onPress={() => {
-                        setModalVisible(true);
-                        //   onPayClick();
-                    }}>
+                    onPress={()=>{setModalVisible(false),navigation.navigate("ReceiptDetails" as never)}}>
                     <Text
                         style={{
                             textAlign: 'center',
@@ -447,86 +444,14 @@ const BeneficiaryList = () => {
                         Pay
                     </Text>
                 </TouchableOpacity>
-                <Modal
-                    transparent
-                    visible={modalVisible}
-                    animationType="fade"
-                    onRequestClose={() => setModalVisible(false)}
-                >
-                    <View style={styles.overlay}>
-                        <View style={styles.modalContainer}>
-                            <Text style={{ width: "100%", fontSize: 16, fontWeight: "500" }}>Confirm your Transaction</Text>
-                            <View style={{ alignItems: "center" }}>
-                                <View style={{ alignItems: "center", alignSelf: "center" }}>
-
-                                    <View style={styles.rowContainer}>
-                                        <Text style={{ color: "#546881", marginBottom: "5%" }}>Customer Name :</Text>
-                                        <Text style={styles.valueText}>Krishna Das</Text>
-                                    </View>
-                                    <View style={styles.rowContainer}>
-                                        <Text style={{ color: "#546881", marginBottom: "5%" }}>Customer Mobile :</Text>
-                                        <Text style={styles.valueText}>+91 9872541456</Text>
-                                    </View>
-                                    <View style={styles.rowContainer}>
-                                        <Text style={{ color: "#546881", marginBottom: "5%" }}>Bank Name :</Text>
-                                        <Text style={styles.valueText}>ICICI Bank</Text>
-                                    </View>
-                                    <View style={styles.rowContainer}>
-                                        <Text style={{ color: "#546881", marginBottom: "5%" }}>Bank Account Number :</Text>
-                                        <Text style={styles.valueText}>1354657948</Text>
-                                    </View>
-                                    <View style={styles.rowContainer}>
-                                        <Text
-                                            style={{ color: "#546881", marginBottom: "5%" }}>Beneficiary Name :</Text>
-                                        <Text style={styles.valueText}>Krishna Das</Text>
-                                    </View>
-                                    <View style={styles.rowContainer}>
-                                        <Text
-                                            style={{ color: "#546881", marginBottom: "5%" }}>Beneficiary Mobile :</Text>
-                                        <Text style={styles.valueText}>+91 9872541456</Text>
-                                    </View>
-                                    <View style={styles.rowContainer}>
-                                        <Text
-                                            style={{ color: "#546881", marginBottom: "5%" }}>Bank IFSC :</Text>
-                                        <Text style={styles.valueText}>ICICIN00013546</Text>
-                                    </View>
-                                    <View style={styles.rowContainer}>
-                                        <Text
-                                            style={{ color: "#546881", marginBottom: "5%" }}>Amount :</Text>
-                                        <Text style={styles.valueText}>₹ 1000.00</Text>
-                                    </View>
-                                    <View style={{
-                                        flexDirection: "row",
-                                        marginTop: "5%",
-                                        width: '100%',
-                                        justifyContent: 'space-between',
-                                        paddingHorizontal: 10
-                                    }}>
-                                        <Text
-                                            style={{ color: "#546881", marginBottom: "5%" }}>API TID :</Text>
-                                        <Text style={styles.valueText}>   +91 8549724654</Text>
-                                    </View>
-                                </View>
-                            </View>
-
-                            <View style={styles.buttonContainer}>
-                                <TouchableOpacity style={styles.usbButton} onPress={()=>setModalVisible(false)}>
-                                    <Text style={styles.usbText}>Cancel</Text>
-                                </TouchableOpacity>
-                                <TouchableOpacity style={styles.yesButton} onPress={()=>{setModalVisible(false),navigation.navigate("Receipt" as never)}}>
-                                    <Text style={styles.yesText}>Confirm</Text>
-                                </TouchableOpacity>
-                            </View>
-                        </View>
-                    </View>
-                </Modal>
+        
             </ScrollView>
 
         </SafeAreaView>
     )
 }
 
-export default BeneficiaryList
+export default Receipt
 
 const styles = StyleSheet.create({
     container: {

@@ -29,6 +29,8 @@ import AllReports from "../Screens/Profile/AllReports";
 import DMTUser from "../Screens/DMT/DMTUser";
 import BeneficiaryList from "../Screens/DMT/BeneficiaryList";
 import BeneficiaryDetails from "../Screens/DMT/BeneficiaryDetails";
+import Receipt from "../Screens/DMT/Receipt";
+import ReceiptDetails from "../Screens/DMT/ReceiptDetails";
 
 
 
@@ -173,6 +175,12 @@ const Router = () => {
              <RootStack.Screen name="BeneficiaryDetails"
             component={BeneficiaryDetails}
             options={{ headerShown: true, title: 'DMT', }} />
+              <RootStack.Screen name="Receipt"
+            component={Receipt}
+            options={{ headerShown: true, title: 'Receipt', }} />
+             <RootStack.Screen name="ReceiptDetails"
+            component={ReceiptDetails}
+            options={{ headerShown: true, title: 'Receipt', }} />
         </RootStack.Navigator>
       </NavigationContainer>
     </>

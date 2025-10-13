@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialIcons from "@react-native-vector-icons/material-icons";
 import DMTUser from "../Screens/DMT/DMTUser";
 import { HeaderBackButton } from "@react-navigation/elements";
+import AepsServices from "../Screens/AEPS/AepsServices";
 const Tab = createBottomTabNavigator();
 
 export const TabNavigator = () => {
@@ -36,7 +37,7 @@ export const TabNavigator = () => {
       />
       <Tab.Screen
         name="Aeps"
-        component={HomeScreen}
+        component={AepsServices}
         options={{
           tabBarIcon: ({ color, size }) => (
             <MaterialDesignIcons name="fingerprint" color={color} size={size} />
