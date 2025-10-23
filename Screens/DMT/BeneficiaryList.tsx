@@ -19,8 +19,6 @@ const BeneficiaryList = () => {
     const [number, setNumber] = useState('');
     const [name, setName] = useState('');
     const [searchText, setSearchText] = useState('');
-    const [aadhaar, setAadhaar] = useState('');
-    const [vid, setVid] = useState('');
     const navigation = useNavigation();
     const [selectedBene, setSelectedBene] = useState<BeneItem | null>(null);
     const [loading, setLoading] = useState(false);

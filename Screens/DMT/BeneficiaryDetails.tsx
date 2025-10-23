@@ -460,7 +460,7 @@ const BeneficiaryList = () => {
                                 <View style={{ alignItems: "center", alignSelf: "center" }}>
 
                                     <View style={styles.rowContainer}>
-                                        <Text style={{ color: "#546881", marginBottom: "5%" }}>Customer Name :</Text>
+                                        <Text style={{ color: "#546881", marginBottom: "5%" }}>   Name :</Text>
                                         <Text style={styles.valueText}>Krishna Das</Text>
                                     </View>
                                     <View style={styles.rowContainer}>

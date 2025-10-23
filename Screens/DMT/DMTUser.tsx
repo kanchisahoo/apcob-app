@@ -8,9 +8,7 @@ import { useNavigation } from '@react-navigation/native'
 const DMTUser = () => {
     const [number, setNumber] = useState('');
     const [showActionButtons, setShowActionButtons] = useState(false);
-const [name, setName] = useState('');
-    const [aadhaar, setAadhaar] = useState('');
-    const [vid, setVid] = useState('');
+    const [name, setName] = useState('');
     const navigation = useNavigation();
     const [modalVisible, setModalVisible] = useState(false)
     const [error, setError] = useState({
